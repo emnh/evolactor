@@ -1,0 +1,27 @@
+{
+  "name": "evolactor",
+  "version": "1.0.0",
+  "description": "Next attempt at append-only language",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emnh/evolactor.git"
+  },
+  "author": "Eivind Magnus Hvidevold <hvidevold@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emnh/evolactor/issues"
+  },
+  "homepage": "https://github.com/emnh/evolactor#readme",
+  "dependencies": {
+    "astring": "^1.4.3",
+    "cherow": "^1.6.9",
+    "immer": "^5.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
