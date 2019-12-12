@@ -18,6 +18,9 @@ Next attempt at append-only language
   - Blocks with symbols on them?
   - How to put blocks together?
  - What about copy-pasting code? Can we translate automatically to a change-based model?
+ - Number of objects that can be held in memory is 7 +- 2 according to:
+   https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two.
+   So we will use 7 as hard limit for context and beyond that hierarchies or visualizations.
 
 # graphics-project
 A random graphics project, basis for exploration
