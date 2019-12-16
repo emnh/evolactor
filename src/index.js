@@ -45,15 +45,30 @@ const evolactor = function() {
 evolactor.setFunction('add', (a, b) => {
   return a + b;
 });
-evolactor.exposeFromTo('add', 'main');
 evolactor.setFunction('main', (a, b) => {
   return evolactor.getContext().add(1, 2);
 });
 evolactor.setFunction('createAndAppendCanvas', () => {
-  const canvas = document.createElement('canvas');
-  document.body.style = 'overflow: hidden; margin: 0px;';
-  document.body.appendChild(canvas);
-  (await ctx.width$()).subscribe(width => canvas.width = width);
-  (await ctx.height$()).subscribe(height => canvas.height = height);
+  const doc = evolactor.getContext('document');
+  const canvas = doc.createElement('canvas');
+  const style = {
+    overflow: 'hidden',
+    margin: '0px'
+  };
+  $(doc.body).css(style);
+  doc.body.appendChild(canvas);
+  evolactor.setContext('canvas', canvas);
 });
+evolactor.setFunction('setSize', () => {
+  const width = evolactor.getContext().width;
+  const height = evolactor.getContext().height;
+  canvas.width = width;
+  canvas.height = height;
+});
+evolactor.setFunction('main', () => {
+  evolactor.getContext().createAndAppendCanvas();
+  evolactor.getContext().setSize();
+});
+
+
 console.log(evolactor.printProgram());
