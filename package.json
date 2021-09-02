@@ -19,7 +19,7 @@
   "dependencies": {
     "astring": "^1.4.3",
     "cherow": "^1.6.9",
-    "immer": "^5.0.1",
+    "immer": "^9.0.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
